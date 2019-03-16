@@ -1,0 +1,1020 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+	<Id>
+		<TypeId>UpgradeModule</TypeId>
+		<SubtypeId>Nanowall_Fill_Large</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Fill</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_icon.dds</Icon>
+	<Description>Nanowall Fill Section</Description>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\Nanowall\Nanowall_Fill_Large.mwm</Model>
+	
+	<BuildProgressModels>
+		<Model BuildPercentUpperBound="0.50" File="Models\Nanowall\Nanowall_Fill_Large_Constr1.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Nanowall\Nanowall_Fill_Large_Constr2.mwm" />
+	</BuildProgressModels>
+	<MountPoints>
+		<MountPoint Side="Left" StartX="0.42" StartY="0.00" EndX="0.58" EndY="1.00" />
+		<MountPoint Side="Right" StartX="0.42" StartY="0.00" EndX="0.58" EndY="1.00" />
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.42" EndX="1.00" EndY="0.58" />
+		<MountPoint Side="Top" StartX="0.00" StartY="0.42" EndX="1.00" EndY="0.58" />
+	</MountPoints>
+	
+	<Components>
+		<Component Subtype="Component_Nanobots" Count="10" />
+		<Component Subtype="Computer" Count="1" />
+	</Components>
+	<CriticalComponent Subtype="Computer" Index="0" />
+	
+	<PhysicsOption>None</PhysicsOption>
+	<IsAirTight>true</IsAirTight>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>10</BuildTimeSeconds>
+
+	<PrimarySound>BlockModuleProductivity</PrimarySound>
+	<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+	<DamagedSound>ParticleElectrical</DamagedSound>
+	<EmissiveColorPreset>Default</EmissiveColorPreset>
+	<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+	<DestroySound>WepSmallWarheadExpl</DestroySound>
+	<PCU>10</PCU>
+</Definition>
+
+<Definition>
+	<Id>
+		<TypeId>CubeBlock</TypeId>
+		<SubtypeId>Nanowall_EdgeA_Large</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Edge A</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_EdgeA_icon.dds</Icon>
+	<Description>Nanowall Edge Section</Description>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>Cube</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	
+	<CubeDefinition>
+		<CubeTopology>StandaloneBox</CubeTopology>
+		<ShowEdges>false</ShowEdges>
+		<Sides>
+			<Side Model="Models\Nanowall\Nanowall_Edge_Large.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+		</Sides>
+	</CubeDefinition>
+	
+	<Components>
+		<Component Subtype="SteelPlate" Count="20" />
+		<Component Subtype="SteelPlate" Count="5" />
+	</Components>
+	<CriticalComponent Subtype="SteelPlate" Index="0" />
+	
+	<BlockPairName>Nanowall_EdgeA</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>8</BuildTimeSeconds>
+	<DisassembleRatio>2.5</DisassembleRatio>
+	<NavigationDefinition>Default</NavigationDefinition>
+	<PCU>1</PCU>
+	<IsAirTight>true</IsAirTight>
+
+	<Skeleton>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+	</Skeleton>
+
+</Definition>
+
+<Definition>
+	<Id>
+		<TypeId>CubeBlock</TypeId>
+		<SubtypeId>Nanowall_EdgeB_Large</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Edge B</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_EdgeB_icon.dds</Icon>
+	<Description>Nanowall Edge Section</Description>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>Cube</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	
+	<CubeDefinition>
+		<CubeTopology>StandaloneBox</CubeTopology>
+		<ShowEdges>false</ShowEdges>
+		<Sides>
+			<Side Model="Models\Nanowall\Nanowall_Edge_Large.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Nanowall\Nanowall_Edge_Large.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+		</Sides>
+	</CubeDefinition>
+	
+	<Components>
+		<Component Subtype="SteelPlate" Count="20" />
+		<Component Subtype="SteelPlate" Count="5" />
+	</Components>
+	<CriticalComponent Subtype="SteelPlate" Index="0" />
+	
+	<BlockPairName>Nanowall_EdgeB</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>8</BuildTimeSeconds>
+	<DisassembleRatio>2.5</DisassembleRatio>
+	<NavigationDefinition>Default</NavigationDefinition>
+	<PCU>1</PCU>
+	<IsAirTight>true</IsAirTight>
+
+	<Skeleton>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+	</Skeleton>
+
+</Definition>
+
+<Definition>
+	<Id>
+		<TypeId>CubeBlock</TypeId>
+		<SubtypeId>Nanowall_EdgeC_Large</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Edge C</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_EdgeC_icon.dds</Icon>
+	<Description>Nanowall Edge Section</Description>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>Cube</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	
+	<CubeDefinition>
+		<CubeTopology>StandaloneBox</CubeTopology>
+		<ShowEdges>false</ShowEdges>
+		<Sides>
+			<Side Model="Models\Nanowall\Nanowall_Edge_Large.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Nanowall\Nanowall_Edge_Large.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Large\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Nanowall\Nanowall_Edge_Large.mwm" PatternWidth="4" PatternHeight="2" />
+		</Sides>
+	</CubeDefinition>
+	
+	<Components>
+		<Component Subtype="SteelPlate" Count="20" />
+		<Component Subtype="SteelPlate" Count="5" />
+	</Components>
+	<CriticalComponent Subtype="SteelPlate" Index="0" />
+	
+	<BlockPairName>Nanowall_EdgeC</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>8</BuildTimeSeconds>
+	<DisassembleRatio>2.5</DisassembleRatio>
+	<NavigationDefinition>Default</NavigationDefinition>
+	<PCU>1</PCU>
+	<IsAirTight>true</IsAirTight>
+
+	<Skeleton>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+	</Skeleton>
+
+</Definition>
+
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+	<Id>
+		<TypeId>UpgradeModule</TypeId>
+		<SubtypeId>Nanowall_Fill_Small</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Fill</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_icon.dds</Icon>
+	<Description>Nanowall Fill Section</Description>
+	<CubeSize>Small</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\Nanowall\Nanowall_Fill_Small.mwm</Model>	
+	
+	<BuildProgressModels>
+		<Model BuildPercentUpperBound="0.50" File="Models\Nanowall\Nanowall_Fill_Small_Constr1.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Nanowall\Nanowall_Fill_Small_Constr2.mwm" />
+	</BuildProgressModels>
+	<MountPoints>
+		<MountPoint Side="Left" StartX="0.10" StartY="0.00" EndX="0.90" EndY="1.00" />
+		<MountPoint Side="Right" StartX="0.10" StartY="0.00" EndX="0.90" EndY="1.00" />
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.10" EndX="1.00" EndY="0.90" />
+		<MountPoint Side="Top" StartX="0.00" StartY="0.10" EndX="1.00" EndY="0.90" />
+	</MountPoints>
+	
+	<Components>
+		<Component Subtype="Component_Nanobots" Count="1" />
+		<Component Subtype="Computer" Count="1" />
+	</Components>
+	<CriticalComponent Subtype="Computer" Index="0" />
+
+	<PhysicsOption>None</PhysicsOption>
+	<IsAirTight>true</IsAirTight>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>10</BuildTimeSeconds>
+
+	<PrimarySound>BlockModuleProductivity</PrimarySound>
+	<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+	<DamagedSound>ParticleElectrical</DamagedSound>
+	<EmissiveColorPreset>Default</EmissiveColorPreset>
+	<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+	<DestroySound>WepSmallWarheadExpl</DestroySound>
+	<PCU>10</PCU>
+</Definition>
+
+<Definition>
+	<Id>
+		<TypeId>CubeBlock</TypeId>
+		<SubtypeId>Nanowall_EdgeA_Small</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Edge A</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_EdgeA_icon.dds</Icon>
+	<Description>Nanowall Edge Section</Description>
+	<CubeSize>Small</CubeSize>
+	<BlockTopology>Cube</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	
+	<CubeDefinition>
+		<CubeTopology>StandaloneBox</CubeTopology>
+		<ShowEdges>false</ShowEdges>
+		<Sides>
+			<Side Model="Models\Nanowall\Nanowall_Edge_Small.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+		</Sides>
+	</CubeDefinition>
+	
+	<Components>
+		<Component Subtype="SteelPlate" Count="1" />
+	</Components>
+	<CriticalComponent Subtype="SteelPlate" Index="0" />
+	
+	<BlockPairName>Nanowall_EdgeA</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>8</BuildTimeSeconds>
+	<DisassembleRatio>2.5</DisassembleRatio>
+	<NavigationDefinition>Default</NavigationDefinition>
+	<PCU>1</PCU>
+	<IsAirTight>true</IsAirTight>
+
+	<Skeleton>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+	</Skeleton>
+
+</Definition>
+
+<Definition>
+	<Id>
+		<TypeId>CubeBlock</TypeId>
+		<SubtypeId>Nanowall_EdgeB_Small</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Edge B</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_EdgeB_icon.dds</Icon>
+	<Description>Nanowall Edge Section</Description>
+	<CubeSize>Small</CubeSize>
+	<BlockTopology>Cube</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	
+	<CubeDefinition>
+		<CubeTopology>StandaloneBox</CubeTopology>
+		<ShowEdges>false</ShowEdges>
+		<Sides>
+			<Side Model="Models\Nanowall\Nanowall_Edge_Small.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Nanowall\Nanowall_Edge_Small.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+		</Sides>
+	</CubeDefinition>
+	
+	<Components>
+		<Component Subtype="SteelPlate" Count="1" />
+	</Components>
+	<CriticalComponent Subtype="SteelPlate" Index="0" />
+	
+	<BlockPairName>Nanowall_EdgeB</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>8</BuildTimeSeconds>
+	<DisassembleRatio>2.5</DisassembleRatio>
+	<NavigationDefinition>Default</NavigationDefinition>
+	<PCU>1</PCU>
+	<IsAirTight>true</IsAirTight>
+
+	<Skeleton>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+	</Skeleton>
+
+</Definition>
+
+<Definition>
+	<Id>
+		<TypeId>CubeBlock</TypeId>
+		<SubtypeId>Nanowall_EdgeC_Small</SubtypeId>
+	</Id>
+	<DisplayName>Nanowall Edge C</DisplayName>
+	<Icon>Textures\GUI\Icons\Nanowall_EdgeC_icon.dds</Icon>
+	<Description>Nanowall Edge C</Description>
+	<CubeSize>Small</CubeSize>
+	<BlockTopology>Cube</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	
+	<CubeDefinition>
+		<CubeTopology>StandaloneBox</CubeTopology>
+		<ShowEdges>false</ShowEdges>
+		<Sides>
+			<Side Model="Models\Nanowall\Nanowall_Edge_Small.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Nanowall\Nanowall_Edge_Small.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Cubes\Small\Armor\SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+			<Side Model="Models\Nanowall\Nanowall_Edge_Small.mwm" PatternWidth="4" PatternHeight="2" />
+		</Sides>
+	</CubeDefinition>
+	
+	<Components>
+		<Component Subtype="SteelPlate" Count="1" />
+	</Components>
+	<CriticalComponent Subtype="SteelPlate" Index="0" />
+	
+	<BlockPairName>Nanowall_EdgeC</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>8</BuildTimeSeconds>
+	<DisassembleRatio>2.5</DisassembleRatio>
+	<NavigationDefinition>Default</NavigationDefinition>
+	<PCU>1</PCU>
+	<IsAirTight>true</IsAirTight>
+
+	<Skeleton>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="0" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="1" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="0" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="1" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="0" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="1" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+		<BoneInfo>
+			<BonePosition x="2" y="2" z="2" />
+			<BoneOffset x="127" y="127" z="127" />
+		</BoneInfo>
+	</Skeleton>
+
+</Definition>
+
+
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AmmoMagazines>
+
+<AmmoMagazine>
+	<Id>
+		<TypeId>AmmoMagazine</TypeId>
+		<SubtypeId>SpotlightTurretAmmoMagazine</SubtypeId>
+	</Id>
+	<DisplayName>DO NOT USE</DisplayName>
+	<Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+	<Size>
+		<X>1.2</X>
+		<Y>0.2</Y>
+		<Z>0.2</Z>
+	</Size>
+	<Mass>0</Mass>
+	<Volume>0</Volume>
+	<Model>Models\Weapons\Projectile_Missile.mwm</Model>
+	<PhysicalMaterial>Ammo</PhysicalMaterial>
+	<Capacity>1</Capacity>
+	<AmmoDefinitionId Subtype="SpotlightTurretAmmo" />
+</AmmoMagazine>
+
+</AmmoMagazines>
+</Definitions>
+<!-- vim: set tabstop=2 expandtab shiftwidth=2 nobackup: -->

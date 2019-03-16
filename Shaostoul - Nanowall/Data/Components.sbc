@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+
+<Component>
+	<Id>
+		<TypeId>Component</TypeId>
+		<SubtypeId>Component_Nanobots</SubtypeId>
+	</Id>
+	<DisplayName>Nanobots</DisplayName>
+	<Icon>Textures\GUI\Icons\Component_Nanobots_icon.dds</Icon>
+	<Size>
+		<X>2</X>
+		<Y>2</Y>
+		<Z>2</Z>
+	</Size>
+	<Mass>8</Mass>
+	<Volume>2</Volume>
+	<Model>Models\Nanowall\Component_Nanobots.mwm</Model>
+	<PhysicalMaterial>Metal</PhysicalMaterial>
+	<MaxIntegrity>500</MaxIntegrity>
+	<DropProbability>0</DropProbability>
+	<Health>500</Health>
+</Component>
+
+</Components>
+</Definitions>

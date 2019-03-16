@@ -1,0 +1,2 @@
+C:\Users\Michael Franklin\AppData\Roaming\SpaceEngineers\Mods\Spotlight Turret Update\Data\Scripts\TurretSpotlight\obj\Debug\TurretSpotlight.csprojResolveAssemblyReference.cache
+C:\Users\Michael Franklin\AppData\Roaming\SpaceEngineers\Mods\Spotlight Turret Update\Data\Scripts\TurretSpotlight\obj\Debug\TurretSpotlight.csproj.CoreCompileInputs.cache

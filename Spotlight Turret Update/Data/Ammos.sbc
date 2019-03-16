@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Ammos>
+
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>SpotlightTurretAmmo</SubtypeId>
+      </Id>
+	  
+      <BasicProperties>		
+		<DesiredSpeed>1</DesiredSpeed>
+		<SpeedVariance>0</SpeedVariance>
+		<MaxTrajectory>1</MaxTrajectory>
+		<BackkickForce>0</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+	    <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage>
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+        <HeadShot>false</HeadShot>
+        <ProjectileTrailScale>0</ProjectileTrailScale>
+        <ProjectileTrailColor x="0.10" y="1" z="0.12" />
+        <ProjectileTrailProbability>0</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+</Ammos>
+</Definitions>
+<!-- vim: set tabstop=2 expandtab shiftwidth=2 nobackup: -->

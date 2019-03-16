@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClassEntries>
+	<Entry Class="LargeBlocks" BlueprintSubtypeId="UpgradeModule/Nanowall_Fill_Large" />
+	<Entry Class="LargeBlocks" BlueprintSubtypeId="Nanowall_Edge_Large" />
+	
+	<Entry Class="SmallBlocks" BlueprintSubtypeId="UpgradeModule/Nanowall_Fill_Small" />
+	<Entry Class="SmallBlocks" BlueprintSubtypeId="Nanowall_Edge_Small" />
+	
+	<Entry Class="Components" BlueprintSubtypeId="Gravel_To_Nanobots" />
+</BlueprintClassEntries>
+</Definitions>

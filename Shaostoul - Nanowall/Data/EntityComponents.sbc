@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <EntityComponents>
+    <EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+      <Id>
+        <TypeId>ModStorageComponent</TypeId>
+        <SubtypeId>Nanowalls</SubtypeId>
+      </Id>
+      <RegisteredStorageGuids>
+        <guid>710A7FB7-3045-4318-BB1B-1C7B3395B383</guid> <!-- Off Color R -->
+		<guid>58727BE4-2A57-4187-BE1A-75BF146D1067</guid> <!-- Off Color G -->
+		<guid>BA7D9735-F96A-4180-8BC7-CDB2B0964047</guid> <!-- Off Color B -->
+		<guid>934FB865-204D-4E43-818B-C06A56E48CBD</guid> <!-- Off Color String -->
+		<guid>5563B0BA-0E91-445C-A317-082C138C3317</guid> <!-- On Color String -->
+		<guid>B7839661-4518-4019-8878-1CFCA6895141</guid> <!-- Off Pattern String -->
+		<guid>16CB8705-B46E-40A7-85D4-901155FA75D3</guid> <!-- On Pattern String -->
+		<guid>ECF22216-6377-49C4-90D0-6B6450E9D96C</guid> <!-- Master Array -->
+      </RegisteredStorageGuids>
+    </EntityComponent>
+  </EntityComponents>
+</Definitions>

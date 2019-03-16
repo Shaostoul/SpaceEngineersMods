@@ -1,0 +1,2221 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<TransparentMaterials>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Component_Nanobots</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>10</Y>
+		<Z>2</Z>
+		<W>0.1</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.2</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Black</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Blue</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>6</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Green</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Magenta</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Orange</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>3</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Red</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_White</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Blank_Yellow</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Blank.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Black</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Blue</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>6</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Green</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Magenta</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Orange</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>3</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Red</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_White</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Dots_Yellow</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Dots.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Black</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Blue</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>6</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Green</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Magenta</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Orange</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>3</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Red</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_White</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Lines_Yellow</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Lines.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Black</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Blue</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>6</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Green</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Magenta</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Orange</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>3</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Red</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_White</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Hexagon_Yellow</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Hexagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Black</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Blue</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>6</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Green</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>2</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Magenta</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Orange</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>3</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Red</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>2</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_White</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>4</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+<TransparentMaterial>
+	<Id>
+        <TypeId>TransparentMaterialDefinition</TypeId> <!-- IGNORE -->
+		<SubtypeId>Nanowall_Octagon_Yellow</SubtypeId> <!-- This is the name of the material as it is named in the 3D modelling software (transparent materials are no longer double sided mesh, require duplicate normals reversed mesh for other side) -->
+	</Id>      
+	<AlphaMistingEnable>false</AlphaMistingEnable> <!-- IGNORE -->
+	<AlphaSaturation>1</AlphaSaturation> <!-- IGNORE -->
+	<CanBeAffectedByOtherLights>false</CanBeAffectedByOtherLights> <!-- Whether or not other lights will cast light onto this texture; Suggest 'true' for windows -->
+	<IgnoreDepth>false</IgnoreDepth> <!-- IGNORE -->
+	<SoftParticleDistanceScale>1</SoftParticleDistanceScale> <!-- IGNORE -->
+	<Texture>Textures\Particles\Shaostoul\Nanowall_Octagon.dds</Texture> <!-- Your transparent material texture file aka DDS goes here -->
+	<GlossTexture>Textures\Models\Shaostoul\Nanowall_ng.dds</GlossTexture> <!-- NEW -->
+	<UseAtlas>false</UseAtlas> <!-- IGNORE -->
+	<NeedSort>true</NeedSort> <!-- IGNORE -->
+	<UVOffset>
+		<X>0</X> <!-- IGNORE -->
+		<Y>0</Y> <!-- IGNORE -->
+	</UVOffset>
+	<UVSize>
+		<X>1</X> <!-- IGNORE -->
+		<Y>1</Y> <!-- IGNORE -->
+	</UVSize>
+	<Color>
+		<X>4</X> <!-- X,Y,Z: Acts sort of like Gamma for the texture; 0=dark 1=normal -->
+		<Y>4</Y>
+		<Z>2</Z>
+		<W>0.01</W> <!-- Use this to adjust transparency; 0=transparent 1=opaque -->
+	</Color>
+	<ColorAdd>
+		<X>0</X> <!-- X,Y,Z: Adds artificial color to texture; Suggested to leave this at 0 -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0.01</W> <!-- Keep this value at 0.1; Use <color><W> to fine tune transparency -->
+	</ColorAdd>
+	<ShadowMultiplier>
+		<X>0</X>  <!-- controls "emissivity", suggest 0 for windows, 1 for force fields -->
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>  <!-- controls "darkening" effect of glass in shadow, 1 for no change, higher for darker tinted glass in shadow -->
+	</ShadowMultiplier>
+	<LightMultiplier> <!-- Affects the light shining through the transparent material making it darker -->
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<W>0</W>
+	</LightMultiplier>
+	<Reflectivity>0</Reflectivity> <!-- Controls reflectivity; Suggest very low numbers, for example 0.05 -->
+	<Fresnel>0</Fresnel> <!-- Suggest 1 to 1.5 for windows; Hard to explain, sort of like reflectivity angle; Suggest 0 for no effect on 'force fields' -->
+	<Gloss>0</Gloss> <!-- How strong the gloss material is -->
+	<GlossTextureAdd>0</GlossTextureAdd> <!-- Not sure -->
+	<SpecularColorFactor>0</SpecularColorFactor> <!-- Not sure -->
+	<IsFlareOccluder>false</IsFlareOccluder> <!-- Hides sprite flares from stuff like the sun, lights, and thrusters; Suggest 'false' usually, use at your own discretion -->
+</TransparentMaterial>
+
+
+</TransparentMaterials>
+</Definitions>

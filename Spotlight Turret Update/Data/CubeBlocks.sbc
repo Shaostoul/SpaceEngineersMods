@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+	<Id>
+		<TypeId>LargeMissileTurret</TypeId>
+		<SubtypeId>Spotlight_Turret_Large</SubtypeId>
+	</Id>
+	<DisplayName>Spotlight Turret</DisplayName>
+	<Icon>Textures\GUI\Icons\Spotlight_Turret_icon.dds</Icon>
+	<CubeSize>Large</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\Misc\Spotlight_Turret_Large.mwm</Model>
+	<Components>
+		<Component Subtype="SteelPlate" Count="5" />
+		<Component Subtype="Construction" Count="30" />
+		<Component Subtype="MetalGrid" Count="5" />
+		<Component Subtype="LargeTube" Count="6" />
+		<Component Subtype="Motor" Count="16" />
+		<Component Subtype="Computer" Count="12" />
+		<Component Subtype="Construction" Count="10" />
+		<Component Subtype="SteelPlate" Count="15" />
+	</Components>
+	<CriticalComponent Subtype="Computer" Index="0" />
+	<BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="Models\Misc\Spotlight_Turret_Large_Constr1.mwm" />
+		<Model BuildPercentUpperBound="0.67" File="Models\Misc\Spotlight_Turret_Large_Constr2.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Misc\Spotlight_Turret_Large_Constr3.mwm" />
+	</BuildProgressModels>
+	<MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+	</MountPoints>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+	<BlockPairName>Spotlight_Turret</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>30</BuildTimeSeconds>
+	<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+	<WeaponDefinitionId Subtype="SpotlightTurretWeapon" />
+	<InventoryMaxVolume>1</InventoryMaxVolume>
+	<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+	<DamagedSound>ParticleWeapExpl</DamagedSound>
+	<ResourceSinkGroup>Defense</ResourceSinkGroup>
+	<MinElevationDegrees>-60</MinElevationDegrees>
+	<MaxElevationDegrees>90</MaxElevationDegrees>
+	<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+	<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+	<IdleRotation>true</IdleRotation>
+	<MaxRangeMeters>2000</MaxRangeMeters>
+	<RotationSpeed>0.01</RotationSpeed>
+	<ElevationSpeed>0.01</ElevationSpeed>
+	<EmissiveColorPreset>Default</EmissiveColorPreset>
+	<MinFov>0.1</MinFov>
+	<MaxFov>1.0</MaxFov>
+	<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+	<DestroySound>WepSmallWarheadExpl</DestroySound>
+	<PCU>300</PCU>
+</Definition>
+
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+<!-- GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK - GRID SIZE LINE BREAK -->
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+	<Id>
+		<TypeId>LargeMissileTurret</TypeId>
+		<SubtypeId>Spotlight_Turret_Small</SubtypeId>
+	</Id>
+	<DisplayName>Spotlight Turret</DisplayName>
+	<Icon>Textures\GUI\Icons\Spotlight_Turret_icon.dds</Icon>
+	<CubeSize>Small</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="5" y="5" z="5" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\Misc\Spotlight_Turret_Large.mwm</Model>
+	<Components>
+		<Component Subtype="SteelPlate" Count="5" />
+		<Component Subtype="Construction" Count="30" />
+		<Component Subtype="MetalGrid" Count="5" />
+		<Component Subtype="LargeTube" Count="6" />
+		<Component Subtype="Motor" Count="16" />
+		<Component Subtype="Computer" Count="12" />
+		<Component Subtype="Construction" Count="10" />
+		<Component Subtype="SteelPlate" Count="15" />
+	</Components>
+	<CriticalComponent Subtype="Computer" Index="0" />
+	<BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="Models\Misc\Spotlight_Turret_Large_Constr1.mwm" />
+		<Model BuildPercentUpperBound="0.67" File="Models\Misc\Spotlight_Turret_Large_Constr2.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Misc\Spotlight_Turret_Large_Constr3.mwm" />
+	</BuildProgressModels>
+	<MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00" />
+	</MountPoints>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+	<BlockPairName>Spotlight_Turret</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>30</BuildTimeSeconds>
+	<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+	<WeaponDefinitionId Subtype="SpotlightTurretWeapon" />
+	<InventoryMaxVolume>0</InventoryMaxVolume>
+	<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+	<DamagedSound>ParticleWeapExpl</DamagedSound>
+	<ResourceSinkGroup>Defense</ResourceSinkGroup>
+	<MinElevationDegrees>-60</MinElevationDegrees>
+	<MaxElevationDegrees>90</MaxElevationDegrees>
+	<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+	<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+	<IdleRotation>true</IdleRotation>
+	<MaxRangeMeters>2000</MaxRangeMeters>
+	<RotationSpeed>0.01</RotationSpeed>
+	<ElevationSpeed>0.01</ElevationSpeed>
+	<EmissiveColorPreset>Default</EmissiveColorPreset>
+	<MinFov>0.1</MinFov>
+	<MaxFov>1.0</MaxFov>
+	<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+	<DestroySound>WepSmallWarheadExpl</DestroySound>
+	<PCU>300</PCU>
+</Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+	<Id>
+		<TypeId>LargeMissileTurret</TypeId>
+		<SubtypeId>SmallSpotlight_Turret_Small</SubtypeId>
+	</Id>
+	<DisplayName>Small Spotlight Turret</DisplayName>
+	<Icon>Textures\GUI\Icons\Spotlight_Turret_icon.dds</Icon>
+	<CubeSize>Small</CubeSize>
+	<BlockTopology>TriangleMesh</BlockTopology>
+	<Size x="1" y="1" z="1" />
+	<ModelOffset x="0" y="0" z="0" />
+	<Model>Models\Misc\Spotlight_Turret_Small.mwm</Model>
+	<Components>
+		<Component Subtype="SteelPlate" Count="1" />
+		<Component Subtype="Construction" Count="1" />
+		<Component Subtype="MetalGrid" Count="1" />
+		<Component Subtype="LargeTube" Count="1" />
+		<Component Subtype="Motor" Count="1" />
+		<Component Subtype="Computer" Count="1" />
+		<Component Subtype="Construction" Count="1" />
+		<Component Subtype="SteelPlate" Count="1" />
+	</Components>
+	<CriticalComponent Subtype="Computer" Index="0" />
+	<BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="Models\Misc\Spotlight_Turret_Small_Constr1.mwm" />
+		<Model BuildPercentUpperBound="0.67" File="Models\Misc\Spotlight_Turret_Small_Constr2.mwm" />
+		<Model BuildPercentUpperBound="1.00" File="Models\Misc\Spotlight_Turret_Small_Constr3.mwm" />
+	</BuildProgressModels>
+	<MountPoints>
+		<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+	</MountPoints>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+	<BlockPairName>Small_Spotlight_Turret</BlockPairName>
+	<EdgeType>Light</EdgeType>
+	<BuildTimeSeconds>30</BuildTimeSeconds>
+	<OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+	<WeaponDefinitionId Subtype="SpotlightTurretWeapon" />
+	<InventoryMaxVolume>0</InventoryMaxVolume>
+	<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+	<DamagedSound>ParticleWeapExpl</DamagedSound>
+	<ResourceSinkGroup>Defense</ResourceSinkGroup>
+	<MinElevationDegrees>-60</MinElevationDegrees>
+	<MaxElevationDegrees>90</MaxElevationDegrees>
+	<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+	<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+	<IdleRotation>true</IdleRotation>
+	<MaxRangeMeters>2000</MaxRangeMeters>
+	<RotationSpeed>0.01</RotationSpeed>
+	<ElevationSpeed>0.01</ElevationSpeed>
+	<EmissiveColorPreset>Default</EmissiveColorPreset>
+	<MinFov>0.1</MinFov>
+	<MaxFov>1.0</MaxFov>
+	<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+	<DestroySound>WepSmallWarheadExpl</DestroySound>
+	<PCU>300</PCU>
+</Definition>
+
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+<!-- vim: set tabstop=2 expandtab shiftwidth=2 nobackup: -->
